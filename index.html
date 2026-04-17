@@ -2,10 +2,31 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>伍禧龙 - 前端工程师</title>
-  <meta name="description" content="伍禧龙，前端工程师，专注 Vue3、TypeScript、GIS 地图开发与 WebRTC" />
-  <meta name="keywords" content="伍禧龙, 前端工程师, Vue3, TypeScript, WebRTC, GIS" />
+
+  <!-- ⭐ SEO核心 -->
+  <title>伍禧龙 - 前端工程师 | Vue3 TypeScript GIS WebRTC</title>
+  <meta name="description" content="伍禧龙，前端工程师，专注 Vue3、TypeScript、GIS 地图开发与 WebRTC 实时通信，具备中大型前端系统开发经验。" />
+  <meta name="keywords" content="伍禧龙, 前端工程师, Vue3, TypeScript, GIS, WebRTC, 前端开发" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- ⭐ 记得换成你的 Vercel 地址 -->
+  <link rel="canonical" href="https://personal-website-tau-ten-73.vercel.app" />
+
+  <!-- ⭐ 结构化数据（关键） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "伍禧龙",
+    "jobTitle": "前端工程师",
+    "description": "专注 Vue3、TypeScript、GIS 地图开发与 WebRTC",
+    "url": "https://personal-website-tau-ten-73.vercel.app",
+    "sameAs": [
+      "https://github.com/wxllong"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -22,7 +43,7 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont;
+      font-family: -apple-system;
       background: var(--bg);
       color: var(--text);
       transition: 0.3s;
@@ -67,39 +88,11 @@
       font-size: 14px;
     }
 
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-      gap: 20px;
-    }
-
-    .project {
-      padding: 20px;
-      border-radius: 12px;
-      background: var(--card);
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: scale(1.05);
-    }
-
     .toggle {
       position: fixed;
       top: 20px;
       right: 20px;
       cursor: pointer;
-    }
-
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: 1s;
-    }
-
-    .fade.show {
-      opacity: 1;
-      transform: translateY(0);
     }
   </style>
 </head>
@@ -110,48 +103,86 @@
 
 <div class="container">
 
+  <!-- ⭐ H1唯一 -->
   <h1>伍禧龙</h1>
   <h2>前端工程师</h2>
 
-  <div class="card fade">
-    <h3>关于我</h3>
+  <!-- ⭐ 关于 -->
+  <div class="card">
+    <h3>关于伍禧龙</h3>
     <p>
-      我是伍禧龙，一名前端工程师，专注 Vue3、TypeScript、GIS 地图开发与 WebRTC 技术，
-      具备复杂系统开发经验。
+      伍禧龙，前端工程师，专注于现代 Web 前端技术体系建设，
+      深入参与中大型前端项目开发，具备复杂业务系统架构设计与性能优化经验。
+    </p>
+    <p>
+      在实际项目中，伍禧龙长期使用 Vue3 + TypeScript 技术栈，
+      涵盖数据可视化、GIS 地图系统、实时通信等多个技术方向。
     </p>
   </div>
 
-  <div class="card fade">
-    <h3>技术栈</h3>
+  <!-- ⭐ 技术栈 -->
+  <div class="card">
+    <h3>核心技术栈</h3>
     <div class="skills">
       <div class="tag">Vue3</div>
       <div class="tag">TypeScript</div>
+      <div class="tag">Vite</div>
+      <div class="tag">Pinia</div>
       <div class="tag">ECharts</div>
       <div class="tag">OpenLayers</div>
       <div class="tag">WebRTC</div>
+      <div class="tag">TailwindCSS</div>
     </div>
   </div>
 
-  <div class="card fade">
-    <h3>项目经验</h3>
-    <div class="projects">
+  <!-- ⭐ 工程能力 -->
+  <div class="card">
+    <h3>工程能力</h3>
+    <ul>
+      <li>Vue3 + TypeScript 中大型项目开发</li>
+      <li>组件封装与系统设计</li>
+      <li>前端工程化（Vite / 构建优化）</li>
+      <li>状态管理（Pinia）</li>
+    </ul>
+  </div>
 
-      <div class="project">
-        <h4>智能地图平台</h4>
-        <p>基于 OpenLayers 的 GIS 可视化系统</p>
-      </div>
+  <!-- ⭐ 性能 -->
+  <div class="card">
+    <h3>性能优化</h3>
+    <ul>
+      <li>首屏优化 / 懒加载</li>
+      <li>虚拟滚动 / 渲染优化</li>
+      <li>请求优化（防抖 / 缓存）</li>
+    </ul>
+  </div>
 
-      <div class="project">
-        <h4>实时视频系统</h4>
-        <p>基于 WebRTC 的流媒体播放方案</p>
-      </div>
+  <!-- ⭐ GIS -->
+  <div class="card">
+    <h3>GIS 与可视化</h3>
+    <ul>
+      <li>OpenLayers 地图系统开发</li>
+      <li>ECharts 数据可视化</li>
+      <li>轨迹 / 标注 / 图层管理</li>
+    </ul>
+  </div>
 
-      <div class="project">
-        <h4>数据大屏</h4>
-        <p>基于 ECharts 的可视化项目</p>
-      </div>
+  <!-- ⭐ WebRTC -->
+  <div class="card">
+    <h3>实时通信</h3>
+    <ul>
+      <li>WebRTC 视频流播放</li>
+      <li>RTMP 转 WebRTC</li>
+      <li>低延迟实时通信优化</li>
+    </ul>
+  </div>
 
-    </div>
+  <!-- ⭐ 链接 -->
+  <div class="card">
+    <h3>链接</h3>
+    <p>
+      GitHub：
+      <a href="https://github.com/wxllong" target="_blank">点击访问</a>
+    </p>
   </div>
 
 </div>
@@ -160,17 +191,6 @@
 function toggleTheme() {
   document.body.classList.toggle('light');
 }
-
-const fades = document.querySelectorAll('.fade');
-
-window.addEventListener('scroll', () => {
-  fades.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 50) {
-      el.classList.add('show');
-    }
-  });
-});
 </script>
 
 </body>
