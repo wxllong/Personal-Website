@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>伍禧龙 - 前端工程师</title>
+  <meta name="description" content="伍禧龙，前端工程师，专注 Vue3、TypeScript、GIS 地图开发与 WebRTC" />
+  <meta name="keywords" content="伍禧龙, 前端工程师, Vue3, TypeScript, WebRTC, GIS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255,255,255,0.08);
+      --text: #fff;
+    }
+
+    body.light {
+      --bg: #f5f5f5;
+      --card: rgba(0,0,0,0.05);
+      --text: #111;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      background: linear-gradient(90deg,#00dbde,#fc00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      font-size: 14px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 20px;
+    }
+
+    .project {
+      padding: 20px;
+      border-radius: 12px;
+      background: var(--card);
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 1s;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleTheme()">🌙</div>
+
+<div class="container">
+
+  <h1>伍禧龙</h1>
+  <h2>前端工程师</h2>
+
+  <div class="card fade">
+    <h3>关于我</h3>
+    <p>
+      我是伍禧龙，一名前端工程师，专注 Vue3、TypeScript、GIS 地图开发与 WebRTC 技术，
+      具备复杂系统开发经验。
+    </p>
+  </div>
+
+  <div class="card fade">
+    <h3>技术栈</h3>
+    <div class="skills">
+      <div class="tag">Vue3</div>
+      <div class="tag">TypeScript</div>
+      <div class="tag">ECharts</div>
+      <div class="tag">OpenLayers</div>
+      <div class="tag">WebRTC</div>
+    </div>
+  </div>
+
+  <div class="card fade">
+    <h3>项目经验</h3>
+    <div class="projects">
+
+      <div class="project">
+        <h4>智能地图平台</h4>
+        <p>基于 OpenLayers 的 GIS 可视化系统</p>
+      </div>
+
+      <div class="project">
+        <h4>实时视频系统</h4>
+        <p>基于 WebRTC 的流媒体播放方案</p>
+      </div>
+
+      <div class="project">
+        <h4>数据大屏</h4>
+        <p>基于 ECharts 的可视化项目</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle('light');
+}
+
+const fades = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  fades.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
