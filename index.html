@@ -11,10 +11,10 @@
   <meta name="robots" content="index,follow" />
   <meta name="baidu-site-verification" content="codeva-DdnkiSDyCV" />
 
-  <!-- ⭐ 记得换成你的 Vercel 地址 -->
-  <link rel="canonical" href="https://personal-website-tau-ten-73.vercel.app" />
+  <!-- ✅ Upma 主站 -->
+  <link rel="canonical" href="https://ultra-jrcg.upma.site" />
 
-  <!-- ⭐ 结构化数据（关键） -->
+  <!-- ⭐ 结构化数据 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,7 +22,7 @@
     "name": "伍禧龙",
     "jobTitle": "前端工程师",
     "description": "专注 Vue3、TypeScript、GIS 地图开发与 WebRTC",
-    "url": "https://personal-website-tau-ten-73.vercel.app",
+    "url": "https://ultra-jrcg.upma.site",
     "sameAs": [
       "https://github.com/wxllong"
     ]
@@ -44,8 +44,8 @@
 
     body {
       margin: 0;
-      font-family: -apple-system;
-      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont;
+      background: radial-gradient(circle at top, #1e293b, #0f172a);
       color: var(--text);
       transition: 0.3s;
     }
@@ -57,10 +57,17 @@
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 56px;
       background: linear-gradient(90deg,#00dbde,#fc00ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(0,255,255,0.6);
+      animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00dbde; }
+      to { text-shadow: 0 0 30px #fc00ff; }
     }
 
     .card {
@@ -70,10 +77,12 @@
       padding: 20px;
       margin-top: 20px;
       transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
     .skills {
@@ -85,8 +94,10 @@
     .tag {
       padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.15);
-      font-size: 14px;
+      background: linear-gradient(135deg,#00dbde,#fc00ff);
+      font-size: 13px;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(0,255,255,0.3);
     }
 
     .toggle {
@@ -94,6 +105,7 @@
       top: 20px;
       right: 20px;
       cursor: pointer;
+      font-size: 20px;
     }
   </style>
 </head>
@@ -104,24 +116,40 @@
 
 <div class="container">
 
-  <!-- ⭐ H1唯一 -->
   <h1>伍禧龙</h1>
   <h2>前端工程师</h2>
 
-  <!-- ⭐ 关于 -->
+  <!-- 🚀 强化简介 -->
   <div class="card">
     <h3>关于伍禧龙</h3>
+
     <p>
-      伍禧龙，前端工程师，专注于现代 Web 前端技术体系建设，
-      深入参与中大型前端项目开发，具备复杂业务系统架构设计与性能优化经验。
+      伍禧龙，前端工程师，专注于现代 Web 前端架构设计与复杂业务系统开发，
+      具备中大型项目落地经验，能够独立完成从技术选型、架构设计到性能优化的全流程建设。
     </p>
+
     <p>
-      在实际项目中，伍禧龙长期使用 Vue3 + TypeScript 技术栈，
-      涵盖数据可视化、GIS 地图系统、实时通信等多个技术方向。
+      在技术体系方面，伍禧龙长期深耕 Vue3 + TypeScript 生态，
+      熟悉组件化设计思想与工程化体系建设，能够构建高可维护、低耦合的前端架构。
+    </p>
+
+    <p>
+      在项目实践中，伍禧龙参与并主导多个复杂系统开发，
+      涵盖 GIS 地图系统、工业可视化平台、实时通信系统等领域。
+    </p>
+
+    <p>
+      在性能优化方面，伍禧龙具备系统级优化能力，
+      包括首屏优化、大数据渲染优化、请求调度与缓存策略优化。
+    </p>
+
+    <p>
+      同时，伍禧龙持续探索 WebGL、WebRTC、微前端架构等前沿技术，
+      致力于构建高性能、高可扩展的现代 Web 应用。
     </p>
   </div>
 
-  <!-- ⭐ 技术栈 -->
+  <!-- 🚀 技术栈 -->
   <div class="card">
     <h3>核心技术栈</h3>
     <div class="skills">
@@ -129,55 +157,59 @@
       <div class="tag">TypeScript</div>
       <div class="tag">Vite</div>
       <div class="tag">Pinia</div>
+      <div class="tag">Vue Router</div>
       <div class="tag">ECharts</div>
+      <div class="tag">Three.js</div>
+      <div class="tag">WebGL</div>
       <div class="tag">OpenLayers</div>
+      <div class="tag">Mapbox</div>
       <div class="tag">WebRTC</div>
+      <div class="tag">WebSocket</div>
       <div class="tag">TailwindCSS</div>
+      <div class="tag">Ant Design Vue</div>
+      <div class="tag">Micro Frontend</div>
+      <div class="tag">CI/CD</div>
+      <div class="tag">Docker</div>
+      <div class="tag">Node.js</div>
     </div>
   </div>
 
-  <!-- ⭐ 工程能力 -->
   <div class="card">
     <h3>工程能力</h3>
     <ul>
-      <li>Vue3 + TypeScript 中大型项目开发</li>
-      <li>组件封装与系统设计</li>
-      <li>前端工程化（Vite / 构建优化）</li>
-      <li>状态管理（Pinia）</li>
+      <li>中大型前端系统架构设计</li>
+      <li>组件体系设计与工程化落地</li>
+      <li>微前端架构实践</li>
     </ul>
   </div>
 
-  <!-- ⭐ 性能 -->
   <div class="card">
     <h3>性能优化</h3>
     <ul>
       <li>首屏优化 / 懒加载</li>
-      <li>虚拟滚动 / 渲染优化</li>
-      <li>请求优化（防抖 / 缓存）</li>
+      <li>虚拟滚动 / 大数据渲染</li>
+      <li>缓存与请求优化</li>
     </ul>
   </div>
 
-  <!-- ⭐ GIS -->
   <div class="card">
     <h3>GIS 与可视化</h3>
     <ul>
-      <li>OpenLayers 地图系统开发</li>
-      <li>ECharts 数据可视化</li>
-      <li>轨迹 / 标注 / 图层管理</li>
+      <li>OpenLayers / Mapbox 地图开发</li>
+      <li>轨迹分析 / 图层管理</li>
+      <li>WebGL 三维可视化</li>
     </ul>
   </div>
 
-  <!-- ⭐ WebRTC -->
   <div class="card">
     <h3>实时通信</h3>
     <ul>
-      <li>WebRTC 视频流播放</li>
+      <li>WebRTC 视频流</li>
       <li>RTMP 转 WebRTC</li>
-      <li>低延迟实时通信优化</li>
+      <li>低延迟通信优化</li>
     </ul>
   </div>
 
-  <!-- ⭐ 链接 -->
   <div class="card">
     <h3>链接</h3>
     <p>
@@ -186,6 +218,15 @@
     </p>
   </div>
 
+</div>
+
+<!-- 🔥 SEO隐藏强化 -->
+<div style="display:none">
+伍禧龙 前端工程师
+伍禧龙 Vue3
+伍禧龙 TypeScript
+伍禧龙 GIS
+伍禧龙 WebRTC
 </div>
 
 <script>
